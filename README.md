@@ -28,10 +28,15 @@ Site URL:
 
 ## 設計書
 ・画面遷移図：https://drive.google.com/file/d/1_ad8Y5K0v_cMnFzWQtZ3pxI6mm6FwoDQ/view?usp=sharing
+
 ・ワイヤーフレーム(管理者)：https://drive.google.com/file/d/1YlBuZJ2Jn3f5wUguU4Cj8VDxPSQUC8Yh/view?usp=sharing
+
 ・ワイヤーフレーム(会員)：https://drive.google.com/file/d/1d6QcsY4H1Ce1dAm1lcuF0tL8zy2fh1Qx/view?usp=sharing
+
 ・ER 図：URL
+
 ・テーブル定義書：URL
+
 ・アプリケーション詳細設計書：URL
 
 ## チャレンジ要素一覧
