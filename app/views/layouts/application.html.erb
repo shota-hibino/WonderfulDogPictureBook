@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--タイトル名の変更が必要なページはタイトル名を変更-->
+    <title><%= content_for?(:title) ? yield(:title) : "WonderfulDogPictureBook"%></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
