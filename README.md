@@ -33,11 +33,11 @@ Site URL:
 
 ・ワイヤーフレーム(会員)：https://drive.google.com/file/d/1d6QcsY4H1Ce1dAm1lcuF0tL8zy2fh1Qx/view?usp=sharing
 
-・ER 図：URL
+・ER 図：https://drive.google.com/file/d/1o913_fRdsaTohYGt6fpiL-AmdNw6bcFH/view?usp=sharing
 
-・テーブル定義書：URL
+・テーブル定義書：https://docs.google.com/spreadsheets/d/10jPYskhM_wDSD4jJJmkPL2b7055fquKqiFIXECu6fhg/edit?usp=sharing
 
-・アプリケーション詳細設計書：URL
+・アプリケーション詳細設計書：https://docs.google.com/spreadsheets/d/1Ifajx3mAidVjcKh32uFZ8Oxm68R6cJkAsExCrrLoVaU/edit?usp=sharing
 
 ## チャレンジ要素一覧
 
