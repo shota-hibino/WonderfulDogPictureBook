@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genre_id: 1
+  dog_image_id: MyString
+  dog_name: MyString
+  dog_introduction: MyText
+
+two:
+  genre_id: 1
+  dog_image_id: MyString
+  dog_name: MyString
+  dog_introduction: MyText
