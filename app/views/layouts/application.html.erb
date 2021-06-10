@@ -2,7 +2,7 @@
 <html>
   <head>
     <!--タイトル名の変更が必要なページはタイトル名を変更-->
-    <title><%= content_for?(:title) ? yield(:title) : "WonderfulDogPictureBook"%></title>
+    <title><%= content_for?(:title) ? yield(:title) : "ワンだふる犬図鑑"%></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,48 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<% if admin_signed_in? %>
+      <header class="admin_header">
+        <div class="header-content">
+          <ul class="flex">
+           <li><%= link_to 'ジャンル一覧', admin_genres_path %></li>
+            <li><%= link_to '犬種一覧', admin_dog_breeds_path %></li>
+            <%= link_to 'ワンだふる犬図鑑', admin_dog_breeds_path, class: "logo" %>
+            <li><%= link_to '会員一覧', admin_members_path %></li>
+            <li><%= link_to 'ログアウト', destroy_admin_session_path %></li>
+          </ul>
+        </div>
+      </header>
+    <% elsif member_signed_in? %>
+      <header>
+        <div class="header-content">
+          <ul class="flex">
+            <!--<p>ようこそ、<%#= current_member.full_name %>さん!</p>-->
+            <li><%= link_to 'サイト紹介', about_path %></li>
+            <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
+            <%= link_to 'ワンだふる犬図鑑', public_member_path, class: "logo" %>
+            <li><%= link_to 'マイページ', new_member_registration_path %></li>
+            <li><%= link_to 'ログアウト', destroy_member_session_path %></li>
+          </ul>
+        </div>
+      </header>
+      <% else %>
+      <header>
+        <div class="header-content">
+          <ul class="flex">
+            <li><%= link_to 'サイト紹介', about_path %></li>
+            <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
+            <%= link_to 'ワンだふる犬図鑑', public_top_path, class: "logo" %>
+            <li><%= link_to '新規登録', new_member_registration_path %></li>
+            <li><%= link_to 'ログイン', new_member_session_path %></li>
+          </ul>
+        </div>
+      </header>
+    <% end %>
+
   <body>
     <%= yield %>
   </body>
+
+  <footer>Copyright © shiba Inc. All Rights Reserved.</footer>
 </html>

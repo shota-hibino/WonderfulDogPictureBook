@@ -1,2 +1,33 @@
-<h1>Admin::DogBreeds#show</h1>
-<p>Find me in app/views/admin/dog_breeds/show.html.erb</p>
+<div class="shiba-background">
+	<div class="container">
+	  <div class="row">
+		<h2 class="col-2 align-self-start text-center text-white bg-secondary mt-4">犬種詳細</h2>
+		<div class="col-12 row align-items-center">
+	  	  <div class="row align-items-center">
+	        <%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
+	      </div>
+
+
+		  <div class="dog_breed_show col-7 offset-1 text-white">
+		    <p>
+		      犬種名：<%= @dog_breed.dog_name  %>
+		    </p>
+
+		    <p>
+		      犬種説明：<%= @dog_breed.dog_introduction  %>
+			</p>
+
+		    <p>
+		      ジャンル：<%= @dog_breed.genre.name %>
+		    </p>
+
+		    <p>
+
+			<div class="col text-left">
+			  <%= link_to "編集する", edit_admin_dog_breed_path(@dog_breed), data: {"turbolinks" => false}, class: "btn btn-success" %>
+		    </div>
+	    </div>
+	  </div>
+    </div>
+  </div>
+</div>

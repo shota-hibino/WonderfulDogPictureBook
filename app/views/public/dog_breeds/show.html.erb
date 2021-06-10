@@ -1,2 +1,15 @@
-<h1>Public::DogBreeds#show</h1>
-<p>Find me in app/views/public/dog_breeds/show.html.erb</p>
+<div class="shiba-background">
+  <div class="container">
+    <div class="row">
+  		<div class="row align-items-center">
+        <%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
+      </div>
+
+      <div class="col-4 offset-1 product_show pt-2 pb-2">
+        <h2><%= @dog_breed.dog_name %></h2><br>
+        <h2><%= @dog_breed.genre.name %></h2><br>
+        <h2><%= @dog_breed.dog_introduction %></h2><br>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class = "col-3">
+  <%= link_to public_dog_breed_path(dog_breed.id), class: "btn-link", :style=>"color:#0099FF;" do %>
+    <%= attachment_image_tag(dog_breed, :dog_image, size: "180x130", fallback: "no_image.jpg") %><br>
+    <%= dog_breed.dog_name %>
+  <% end %>
+</div>

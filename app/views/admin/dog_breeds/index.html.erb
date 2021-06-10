@@ -1,2 +1,43 @@
-<h1>Admin::DogBreeds#index</h1>
-<p>Find me in app/views/admin/dog_breeds/index.html.erb</p>
+<div class="shiba-background">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-2 text-center text-white align-self-start bg-secondary mt-4">犬種一覧</h2>
+      <div class = "text-center offset-8 mt-4">
+        <%= link_to new_admin_dog_breed_path, data: {"turbolinks" => false}, class: "btn btn-warning" do %>
+        <i class="fas fa-plus"></i>
+          新規犬種登録
+        <% end %>
+      </div>
+
+      <table class="table table-light table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th class = text-center>犬種</th>
+            <th class = text-center>ジャンル</th>
+          </tr>
+        </thead>
+
+        <tbody>
+  				<% @dog_breeds.each do |dog_breed| %>
+    				<tr>
+              <td class="text-left align-middle">
+                <!--犬種-->
+                <%= link_to admin_dog_breed_path(dog_breed), class: "btn-link" do %>
+                  <%= dog_breed.dog_name %>
+                <% end %>
+              </td>
+
+              <td class="text-center align-middle">
+                <!--ジャンル-->
+                <%= dog_breed.genre.name %>
+              </td>
+
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%= paginate(@dog_breeds) %>
+  </div>
+</div>

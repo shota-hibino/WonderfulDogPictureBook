@@ -1,2 +1,18 @@
-<h1>Admin::DogBreeds#new</h1>
-<p>Find me in app/views/admin/dog_breeds/new.html.erb</p>
+<div class="shiba-background">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-3 align-self-start text-center text-white bg-secondary mt-4">新規犬種登録</h2>
+      <div class="col-12">
+        <div class="col text-center text-white dog_breed_new_edit">
+        <%= form_with model:@dog_breed, url: admin_dog_breeds_path, local:true, method: :post, class: "form-horizontal" do |f| %>
+          <%#= render "layouts/error_messages", resource: @dog_breed %>
+          <%= render "form_new_dog_breed", f: f %>
+        </div>
+  	    <div class="col text-center">
+  	      <%= f.submit "新規登録", class: "btn btn-success btn-lg text-center" %>
+  	    </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
