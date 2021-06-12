@@ -4,6 +4,6 @@ class Member < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to:comment
-  belongs_to:favorite
+  has_many:comments
+  has_many:favorites
 end

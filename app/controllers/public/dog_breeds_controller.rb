@@ -8,6 +8,7 @@ class Public::DogBreedsController < ApplicationController
     @genres = Genre.all
     @dog_breeds = DogBreed.all
     @dog_breed = DogBreed.find(params[:id])
+    @comment = Comment.new
   end
 
   private

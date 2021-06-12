@@ -1,7 +1,7 @@
 class DogBreed < ApplicationRecord
   belongs_to :genre
-  belongs_to:comment
-  belongs_to:favorite
+  has_many:comments
+  has_many:favorites
 
   attachment :dog_image
 end
