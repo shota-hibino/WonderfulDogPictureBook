@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+/*背景画像　デプロイ用の設定*/
+background-top {
+  background-image: image-url("toy_poodle.jpg");
+}

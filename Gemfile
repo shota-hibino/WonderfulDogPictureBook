@@ -76,3 +76,9 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'bootstrap', '~> 4.5'
 # ページ遷移用
 gem 'kaminari','~> 1.2.1'
+
+# MySQLを利用するための設定
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
