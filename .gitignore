@@ -32,3 +32,5 @@
 
 #git hubの管理から外す
 /.env
+
+/db/seeds.rb
