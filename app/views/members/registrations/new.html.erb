@@ -1,29 +1,62 @@
-<h2>Sign up</h2>
+<h2>新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "members/shared/error_messages", resource: resource %>
+  <div class="row">
+    <div class="col-1">
+      <table class="table table-borderless col-8">
+        <tr>
+          <th>名前</th>
+          <th><%= f.label :"(姓)" %></th>
+          <th><%= f.text_field :last_name, autofocus: true %></th>
+          <th><%= f.label :"(名)" %></th>
+          <th><%= f.text_field :first_name, autofocus: true %></th>
+        </tr>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <tr>
+          <th>フリガナ</th>
+          <th><%= f.label :"(セイ)" %></th>
+          <th><%= f.text_field :last_name_kana, autofocus: true %></th>
+          <th><%= f.label :"(メイ)" %></th>
+          <th><%= f.text_field :first_name_kana, autofocus: true %></th>
+        </tr>
+
+        <tr>
+          <th>メールアドレス</th>
+          <th></th>
+          <th><%= f.email_field :email, autofocus: true, autocomplete: "email" %></th>
+          <th></th>
+        </tr>
+
+        <tr>
+          <th>パスワード(6文字以上)</th>
+          <th></th>
+          <th><%= f.password_field :password, autocomplete: "new-password" %></th>
+        </tr>
+
+        <tr>
+          <th>パスワード(確認用)</th>
+          <th></th>
+          <th><%= f.password_field :password_confirmation, autocomplete: "new-password" %></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th><%= f.submit "　　新規登録　　" , class:'btn btn-success' %></th>
+        </tr>
+      </table>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
 
-<%= render "members/shared/links" %>
+ <div class="row">
+    <div class="col-2">
+      <h4 class="my-4"><span style="background-color:#EFEFEF">　既に登録済みの方　</span></h4>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <%= link_to "こちら", new_member_session_path %> からログインしてください。
+      </div>
+    </div>
+  </div>
