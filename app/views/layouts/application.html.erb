@@ -29,8 +29,8 @@
             <!--<p>ようこそ、<%#= current_member.full_name %>さん!</p>-->
             <li><%= link_to 'サイト紹介', about_path %></li>
             <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
-            <%= link_to 'ワンだふる犬図鑑', public_member_path(current_member) %>
-            <li><%= link_to 'マイページ', new_member_registration_path %></li>
+            <%= link_to 'ワンだふる犬図鑑', top_path %>
+            <li><%= link_to 'マイページ', public_member_path(current_member) %></li>
             <li><%= link_to 'ログアウト', destroy_member_session_path %></li>
           </ul>
         </div>
@@ -41,7 +41,7 @@
           <ul class="flex">
             <li><%= link_to 'サイト紹介', about_path %></li>
             <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
-            <%= link_to 'ワンだふる犬図鑑', public_top_path, class: "logo" %>
+            <%= link_to 'ワンだふる犬図鑑', top_path %>
             <li><%= link_to '新規登録', new_member_registration_path %></li>
             <li><%= link_to 'ログイン', new_member_session_path %></li>
           </ul>
