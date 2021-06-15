@@ -16,15 +16,12 @@ class Public::MembersController < ApplicationController
     end
   end
 
-  def hide
+  def secession_view
     @member = current_member
-    @member.update(withdrawal_flag: true)
+    @member.update(is_active: true)
     # セッション情報を削除
     reset_session
-    redirect_to public_top_path, notice: "またのご利用をお待ちしております。"
-  end
-
-  def secession_view
+    redirect_to top_path, notice: "またのご利用をお待ちしております。"
   end
 
   def secession

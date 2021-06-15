@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_122806) do
   create_table "favorites", force: :cascade do |t|
     t.integer "member_id"
     t.integer "dog_breed_id"
+    t.integer "comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

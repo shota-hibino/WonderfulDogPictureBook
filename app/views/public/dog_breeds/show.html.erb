@@ -10,26 +10,34 @@
         <h2><%= @dog_breed.genre.name %></h2><br>
         <h2><%= @dog_breed.dog_introduction %></h2><br>
       </div>
-      <!--コメント機能-->
-      <div class="comments">
-        <p>コメント件数：<%= @dog_breed.comments.count %></p>
-        <% @dog_breed.comments.each do |comment| %>
-          <%= comment.member.first_name %>
-          <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
-          <% if comment.member == current_member %>
-            <div class="comment-delete">
-              <%= link_to "削除", public_dog_breed_comment_path(comment.dog_breed, comment), method: :delete %>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
+      <!--コメント機能表示-->
+      <span class = "comments">
+        <%= render 'public/comments/index', dog_breed: @dog_breed %>
+      </span>
 
+      <!--コメント投稿-->
       <div class="new-comment">
-      <%= form_with(model:[@dog_breed, @comment],url: public_dog_breed_comments_path(@dog_breed), local: true) do |f| %>
+      <%= form_with(model:[@dog_breed, @comment],url: public_dog_breed_comments_path(@dog_breed), remote: true) do |f| %>
         <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
         <%= f.submit "送信する" %>
       <% end %>
       </div>
+
+
+          <!--いいね機能-->
+          <!--<#% if @comment.favorited_by?(current_member) %>-->
+          <!--<p>-->
+          <!--  <%#= link_to public_dog_breed_comment_favorites_path(@comment), method: :delete do %>-->
+          <!--    ♥<%#= @comment.favorites.count %> いいね-->
+          <!--  <#% end %>-->
+          <!--</p>-->
+          <!--<#% else %>-->
+          <!--<p>-->
+          <!--  <%#= link_to public_dog_breed_comment_favorites_path(@comment), method: :post do %>-->
+          <!--    ♡<%#= @comment.favorites.count %> いいね-->
+          <!--  <#% end %>-->
+          <!--</p>-->
+          <!--<#% end %>-->
     </div>
   </div>
 </div>
