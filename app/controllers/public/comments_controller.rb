@@ -11,7 +11,6 @@ class Public::CommentsController < ApplicationController
     @dog_breed = DogBreed.find(params[:dog_breed_id])
     @comment = @dog_breed.comments.find(params[:id])
     @comment.destroy
-    # Comment.find_by(id: params[:id], dog_breed_id: params[:dog_breed_id]).destroy
   end
 
   private

@@ -21,6 +21,8 @@ Rails.application.routes.draw do
         resources :favorites, only: [:create, :destroy]
       end
     end
+
+    get 'public/searches', to: 'searches#search'
     resources :members,only:[:show, :edit, :update, :secession_view, :secession]
     root to: "public/homes#top", as: "top"
   end

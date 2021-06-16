@@ -1,2 +1,17 @@
-<h1>Public::Searches#search</h1>
-<p>Find me in app/views/public/searches/search.html.erb</p>
+<h3>dog_breeds search for "<%= @content %>"</h3>
+<div class="shiba-background">
+	<div class="container">
+		<div class="row">
+		  <h2 class="col-3 align-self-start text-center text-white bg-secondary mt-4">犬種一覧</h2>
+		  <div class="col-12">
+				<div class="d-inline-flex flex-row flex-wrap product_index p-4">
+			  	<% @records.each do |dog_breed| %>
+			    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
+			  	<% end %>
+				</div>
+		  </div>
+		</div>
+	  <%#= paginate(@dog_breeds) %>
+	</div>
+</div>
+

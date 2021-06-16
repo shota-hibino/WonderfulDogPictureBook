@@ -1,7 +1,10 @@
 class Public::SearchesController < ApplicationController
-  def index
-  end
+  before_action :authenticate_member!
 
-  def search
-  end
+	def search
+		@model = params[:model]
+		@content = params[:content]
+		@method = params[:method]
+		@records = DogBreed.search_for(@content, @method)
+	end
 end

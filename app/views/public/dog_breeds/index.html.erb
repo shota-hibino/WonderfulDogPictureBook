@@ -5,11 +5,11 @@
 	  	<div class="col-12">
 				<div class="d-inline-flex flex-row flex-wrap product_index p-4">
 		  		<% @dog_breeds.each do |dog_breed| %>
-		    		<%= render "dog_breed_individual", dog_breed: dog_breed %>
+		    		<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
 		  		<% end %>
 				</div>
 	  	</div>
 	  </div>
-	  <%= paginate(@dog_breeds) %>
+	  <%#= paginate(@dog_breeds) %>
 	</div>
 </div>
