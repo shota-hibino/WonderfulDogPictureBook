@@ -8,52 +8,82 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   </head>
 
-<% if admin_signed_in? %>
-      <header class="admin_header">
-        <div class="header-content">
-          <ul class="flex">
-           <li><%= link_to 'ジャンル一覧', admin_genres_path %></li>
-            <li><%= link_to '犬種一覧', admin_dog_breeds_path %></li>
-            <%= link_to 'ワンだふる犬図鑑', admin_dog_breeds_path %>
-            <li><%= link_to '会員一覧', admin_members_path %></li>
-            <li><%= link_to 'ログアウト', destroy_admin_session_path %></li>
-          </ul>
-        </div>
+  <body>
+    <!--管理者ログイン済みの場合-->
+    <% if admin_signed_in? %>
+      <header class="header">
+
+
+            <%= link_to 'ジャンル一覧', admin_genres_path %>
+            <%= link_to '犬種一覧', admin_dog_breeds_path %>
+
+
+
+
+          <%= link_to admin_dog_breeds_path do %>
+            <%= image_tag 'logo.png' %>
+          <% end %>
+
+
+
+          <%= link_to '会員一覧', admin_members_path %>
+          <%= link_to 'ログアウト', destroy_admin_session_path %>
+
       </header>
+    <!--会員ログイン済みの場合-->
     <% elsif member_signed_in? %>
-      <header>
-        <div class="header-content">
-          <ul class="flex">
-            <!--<p>ようこそ、<%#= current_member.full_name %>さん!</p>-->
-            <li><%= link_to 'サイト紹介', about_path %></li>
-            <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
-            <%= link_to 'ワンだふる犬図鑑', top_path %>
-            <li><%= link_to 'マイページ', public_member_path(current_member) %></li>
-            <li><%= link_to 'ログアウト', destroy_member_session_path %></li>
-          </ul>
+      <header class="header">
+
+          <!--<p>ようこそ、<%#= current_member.full_name %>さん!</p>-->
+          <%= link_to 'サイト紹介', about_path %>
+          <%= link_to '犬種一覧', public_dog_breeds_path %>
+
+
+
+          <%= link_to top_path do %>
+            <%= image_tag 'logo.png' %>
+          <% end %>
+
+
+
+          <%= link_to 'マイページ', public_member_path(current_member) %>
+          <%= link_to 'ログアウト', destroy_member_session_path %>
           <%= render 'public/searches/search' %>
-        </div>
+
       </header>
-      <% else %>
-      <header>
-        <div class="header-content">
-          <ul class="flex">
-            <li><%= link_to 'サイト紹介', about_path %></li>
-            <li><%= link_to '犬種一覧', public_dog_breeds_path %></li>
-            <%= link_to 'ワンだふる犬図鑑', top_path %>
-            <li><%= link_to '新規登録', new_member_registration_path %></li>
-            <li><%= link_to 'ログイン', new_member_session_path %></li>
-          </ul>
+    <!--未ログインの場合-->
+    <% else %>
+      <header class="header">
+        <ul>
+          <li><%= link_to 'サイト紹介', about_path ,class: "header-text"%></li>
+          <li><%= link_to '犬種一覧', public_dog_breeds_path ,class: "header-text"%></li>
+
+          <%= link_to top_path do %>
+            <li><%= image_tag 'logo.png' ,class: "header-logo"%></li>
+          <% end %>
+
+          <li><%= link_to '新規登録', new_member_registration_path ,class: "header-text"%></li>
+          <li><%= link_to 'ログイン', new_member_session_path ,class: "header-text"%></li>
+        </ul>
+
+        <div class="search">
           <%= render 'public/searches/search' %>
         </div>
+
       </header>
     <% end %>
 
-  <body>
-    <%= yield %>
-  </body>
+    <main>
+      <%= yield %>
+    </main>
 
-  <footer>Copyright © shiba Inc. All Rights Reserved.</footer>
+    <footer>
+      <div class = footer-text>
+        Copyright © shiba Inc. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
 </html>

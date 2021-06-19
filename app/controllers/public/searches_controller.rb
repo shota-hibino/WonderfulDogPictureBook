@@ -1,7 +1,7 @@
 class Public::SearchesController < ApplicationController
-  before_action :authenticate_member!
 
 	def search
+		@dog_breeds = DogBreed.all.page(params[:page]).per(8)
 		@model = params[:model]
 		@content = params[:content]
 		@method = params[:method]

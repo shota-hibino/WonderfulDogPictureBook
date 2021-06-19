@@ -14,7 +14,85 @@
  *= require_self
  */
 
+@import "bootstrap";
+
 // /*背景画像　デプロイ用の設定*/
 background-top {
   background-image: url("toy_poodle.jpg");
 }
+
+header{
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 0 10px #dddddd;
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+
+.header-text{
+  font-size: 25px;
+}
+
+// 等間隔に並べる
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+li {
+  list-style-type: none;
+  color: #000;
+  margin-top: 20px;
+}
+
+.search{
+  float: right;
+  margin-right: 10px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url("background.jpg");
+}
+
+main {
+  padding: 120px 20px 90px 20px;
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top{
+  margin: 0;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+footer {
+  height: 70px;
+  width: 100%;
+  background-color: #2f3a44;
+  color: #e8e8e8;
+  padding-top: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-text{
+  margin: auto;
+  width: 20em;
+}
+
