@@ -1,4 +1,6 @@
 class Public::CommentsController < ApplicationController
+  before_action :authenticate_member!
+
   def create
     @dog_breed = DogBreed.find(params[:dog_breed_id])
     @comment = Comment.new(comment_params)

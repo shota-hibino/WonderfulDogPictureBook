@@ -1,4 +1,6 @@
 class Admin::MembersController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @members = Member.all
   end
@@ -10,9 +12,6 @@ class Admin::MembersController < ApplicationController
   def edit
     @member = Member.find(params[:id])
   end
-
-  #def withdrawal
-  #end
 
   def update
     @member = Member.find(params[:id])

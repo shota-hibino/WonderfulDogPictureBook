@@ -3,14 +3,14 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :reject_member, only: [:create], if: :devise_controller?
 
-  # def after_sign_in_path_for(resource)
-  #   case resource
-  #   when Admin
-  #     admin_orders_path
-  #   when Member
-  #     public_member_path(current_member)
-  #   end
-  # end
+  def after_sign_in_path_for(resource)
+    case resource
+    when Admin
+      admin_dog_breeds_path
+    when Member
+      top_path
+    end
+  end
 
   # def after_sign_out_path_for(resource)
   #   if resource == :member

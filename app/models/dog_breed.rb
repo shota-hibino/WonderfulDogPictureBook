@@ -21,4 +21,7 @@ class DogBreed < ApplicationRecord
   end
 
   attachment :dog_image
+
+  validates :genre_id, :dog_name, presence: true
+  validates :dog_introduction, length: {maximum: 200}
 end

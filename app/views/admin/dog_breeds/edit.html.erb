@@ -2,7 +2,7 @@
   <h2 class="dog_breed-new-edit-title">犬種編集</h2>
   <div class="dog_breed_new_edit">
     <%= form_with model:@dog_breed, url: admin_dog_breed_path, method: :patch, local:true, class: "form-horizontal" do |f| %>
-      <%#= render "layouts/error_messages", resource: @dog_breed%>
+      <%= render "layouts/error_messages", model: f.object, resource: @dog_breed%>
       <%= render "form_new_dog_breed", f: f %>
 
       <div class="col text-center">

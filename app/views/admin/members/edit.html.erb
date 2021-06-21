@@ -1,7 +1,7 @@
 <div class="container">
   <h2 class="dog_breed-edit-title"><%= @member.last_name %><%= @member.first_name %>さんの会員情報編集</h2>
   <%= form_with model:@member, url:admin_member_path(@member.id), local:true do |f| %>
-    <%#= render 'layouts/error_messages', resource: @member %>
+    <%= render 'layouts/error_messages', model: f.object, resource: @member %>
     <table class="table table-borderless member-edit-table">
       <tbody>
         <tr>

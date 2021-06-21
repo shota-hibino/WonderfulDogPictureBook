@@ -4,6 +4,8 @@ class Member < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many:comments
+   validates :first_name, :last_name, :first_name_kana, :last_name_kana, presence: true
+
+  has_many:comments, dependent: :destroy
   has_many:favorites
 end
