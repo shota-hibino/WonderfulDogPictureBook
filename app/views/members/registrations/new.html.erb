@@ -1,41 +1,41 @@
-<h2>新規登録</h2>
+<div class="container">
+  <h2 class="signup-title">新規登録</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "members/shared/error_messages", resource: resource %>
-  <div class="row">
-    <div class="col-1">
-      <table class="table table-borderless col-8">
+  <div class="member-signup">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "members/shared/error_messages", resource: resource %>
+      <table class="table table-borderless">
         <tr>
-          <th>名前</th>
-          <th><%= f.label :"(姓)" %></th>
+          <th class="member-signup-text">名前</th>
+          <th class="member-signup-text"><%= f.label :"(姓)" %></th>
           <th><%= f.text_field :last_name, autofocus: true %></th>
-          <th><%= f.label :"(名)" %></th>
+          <th class="member-signup-text"><%= f.label :"(名)" %></th>
           <th><%= f.text_field :first_name, autofocus: true %></th>
         </tr>
 
         <tr>
-          <th>フリガナ</th>
-          <th><%= f.label :"(セイ)" %></th>
+          <th class="member-signup-text">フリガナ</th>
+          <th class="member-signup-text"><%= f.label :"(セイ)" %></th>
           <th><%= f.text_field :last_name_kana, autofocus: true %></th>
-          <th><%= f.label :"(メイ)" %></th>
+          <th class="member-signup-text"><%= f.label :"(メイ)" %></th>
           <th><%= f.text_field :first_name_kana, autofocus: true %></th>
         </tr>
 
         <tr>
-          <th>メールアドレス</th>
+          <th class="member-signup-text">メールアドレス</th>
           <th></th>
           <th><%= f.email_field :email, autofocus: true, autocomplete: "email" %></th>
           <th></th>
         </tr>
 
         <tr>
-          <th>パスワード(6文字以上)</th>
+          <th class="member-signup-text">パスワード(6文字以上)</th>
           <th></th>
           <th><%= f.password_field :password, autocomplete: "new-password" %></th>
         </tr>
 
         <tr>
-          <th>パスワード(確認用)</th>
+          <th class="member-signup-text">パスワード(確認用)</th>
           <th></th>
           <th><%= f.password_field :password_confirmation, autocomplete: "new-password" %></th>
         </tr>
@@ -45,18 +45,11 @@
           <th><%= f.submit "　　新規登録　　" , class:'btn btn-success' %></th>
         </tr>
       </table>
+    <% end %>
+
+    <div class="member-already-signup">
+      <h4>既に登録済みの方</h4>
+      <%= link_to "こちら", new_member_session_path %> からログインしてください。
     </div>
   </div>
-
-<% end %>
-
- <div class="row">
-    <div class="col-2">
-      <h4 class="my-4"><span style="background-color:#EFEFEF">　既に登録済みの方　</span></h4>
-    </div>
-    <div class="row">
-      <div class="col-3">
-        <%= link_to "こちら", new_member_session_path %> からログインしてください。
-      </div>
-    </div>
-  </div>
+</div>

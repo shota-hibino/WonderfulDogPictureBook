@@ -72,6 +72,238 @@ main {
   justify-content: center;
 }
 
+// 管理者
+
+// ログイン
+.admin-login{
+  position: fixed;
+  top: 200px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.login-title{
+  position: fixed;
+  top: 150px;
+  left: 350px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+// 犬種一覧画面
+
+.dog_breed-index-title{
+  position: fixed;
+  top: 150px;
+  left: 295px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.admin-dog_breeds-table{
+  position: fixed;
+  top: 200px;
+  width: 50%;
+}
+
+.new-dog_breed{
+  position: fixed;
+  top: 150px;
+  right: 295px;
+}
+
+.dog_breed-index-page{
+  position: fixed;
+  top: 640px;
+}
+
+// 犬種新規登録・編集画面
+.dog_breed-new-edit-title{
+  position: fixed;
+  top: 150px;
+  left: 295px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.dog_breed_new_edit{
+  position: fixed;
+  top: 220px;
+}
+
+.dog_breed_new_edit-text{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+textarea {
+  resize: none;
+  height:340px;
+}
+
+// 犬種詳細画面
+.dog_breed_show-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.dog_breed_show-image{
+  position: fixed;
+  top: 220px;
+  left: 150px;
+}
+
+.dog_breed_show-text{
+  position: fixed;
+  top: 220px;
+  left: 550px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+// ジャンル一覧
+.genre-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.genre{
+  position: fixed;
+  top: 240px;
+  left: 130px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+// ジャンル編集
+.genre-edit-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.genre-edit{
+  position: fixed;
+  top: 220px;
+  left: 120px;
+}
+
+// メンバー一覧
+.member-index-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-table{
+  position: fixed;
+  top: 220px;
+  width: 50%;
+}
+
+// メンバー詳細
+.member-show-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-show-table{
+  position: fixed;
+  top: 220px;
+  width: 50%;
+}
+
+.member-edit-button{
+  position: fixed;
+  top: 330px;
+  left: 900px;
+}
+
+// メンバー編集
+.dog_breed-edit-title{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-edit-table{
+  position: fixed;
+  top: 220px;
+  left: 120px;
+  width: 70%;
+}
+
+.member-edit-table-text{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-edit-button{
+  position: fixed;
+  top: 500px;
+  left: 320px;
+}
+
+// 会員又は未ログイン
+
+// トップページ
 .top{
   margin: 0;
   color: orange;
@@ -79,6 +311,164 @@ main {
               -2px  2px 3px white,
                2px -2px 3px white,
               -2px -2px 3px white;
+}
+
+// サイト紹介
+.about{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+// ログイン
+.member-login{
+  position: fixed;
+  top: 200px;
+}
+
+.member-login-text{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-unregistered{
+  margin-top: 10px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+// 新規登録
+.signup-title{
+  position: fixed;
+  top: 150px;
+  left: 200px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-signup{
+  position: fixed;
+  top: 200px;
+}
+
+.member-signup-text{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-already-signup{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+
+
+// 犬種一覧
+
+.pagination{
+  justify-content: center;
+}
+
+.dog_breed_title{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.content {
+  width: 780px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+}
+
+.dog_breed-individual{
+  margin: 10px;
+}
+
+
+// 犬種詳細
+.dog_breed_show-title-member{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.dog_breed_show-image-member{
+  position: fixed;
+  top: 220px;
+  left: 150px;
+}
+
+.dog_breed_show-text-member{
+  position: fixed;
+  top: 460px;
+  left: 150px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.comments{
+  position: fixed;
+  top: 330px;
+  left: 780px;
+}
+
+.new-comment{
+  position: fixed;
+  top: 220px;
+  left: 780px;
+}
+
+// マイページ
+.member-show-title-login{
+  position: fixed;
+  top: 150px;
+  left: 100px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.member-show-table-login{
+  position: fixed;
+  top: 220px;
+  width: 50%;
+}
+
+.member-edit-button-login{
+  position: fixed;
+  top: 380px;
+  left: 260px;
 }
 
 footer {

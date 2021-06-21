@@ -1,9 +1,8 @@
 <div id="dog_breed_<%= dog_breed.id %>">
-<p>コメント件数：<%= dog_breed.comments.count %></p>
-
 <% dog_breed.comments.each do |comment| %>
     <%= comment.member.first_name %>
-    <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    <%= comment.created_at.strftime('%Y/%m/%d') %><br />
+    <%= comment.comment %>
 
     <% if comment.member == current_member %>
       <div class="comment-delete">

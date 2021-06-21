@@ -15,58 +15,53 @@
     <!--管理者ログイン済みの場合-->
     <% if admin_signed_in? %>
       <header class="header">
-
-
-            <%= link_to 'ジャンル一覧', admin_genres_path %>
-            <%= link_to '犬種一覧', admin_dog_breeds_path %>
-
-
-
+        <ul>
+          <li><%= link_to 'ジャンル一覧', admin_genres_path, class: "header-text" %></li>
+          <li><%= link_to '犬種一覧', admin_dog_breeds_path, class: "header-text" %></li>
 
           <%= link_to admin_dog_breeds_path do %>
-            <%= image_tag 'logo.png' %>
+            <li><%= image_tag 'logo.png', class: "header-logo" %></li>
           <% end %>
 
-
-
-          <%= link_to '会員一覧', admin_members_path %>
-          <%= link_to 'ログアウト', destroy_admin_session_path %>
-
+          <li><%= link_to '会員一覧', admin_members_path, class: "header-text" %></li>
+          <li><%= link_to 'ログアウト', destroy_admin_session_path, class: "header-text" %></li>
+        </ul>
       </header>
+
     <!--会員ログイン済みの場合-->
     <% elsif member_signed_in? %>
       <header class="header">
-
+        <ul>
           <!--<p>ようこそ、<%#= current_member.full_name %>さん!</p>-->
-          <%= link_to 'サイト紹介', about_path %>
-          <%= link_to '犬種一覧', public_dog_breeds_path %>
-
-
+          <li><%= link_to 'サイト紹介', about_path, class: "header-text" %></li>
+          <li><%= link_to '犬種一覧', public_dog_breeds_path, class: "header-text" %></li>
 
           <%= link_to top_path do %>
-            <%= image_tag 'logo.png' %>
+            <li><%= image_tag 'logo.png', class: "header-logo" %></li>
           <% end %>
 
+          <li><%= link_to 'マイページ', public_member_path(current_member), class: "header-text" %></li>
+          <li><%= link_to 'ログアウト', destroy_member_session_path, class: "header-text" %></li>
+        </ul>
 
-
-          <%= link_to 'マイページ', public_member_path(current_member) %>
-          <%= link_to 'ログアウト', destroy_member_session_path %>
+        <div class="search">
           <%= render 'public/searches/search' %>
-
+        </div>
       </header>
+
     <!--未ログインの場合-->
     <% else %>
       <header class="header">
         <ul>
-          <li><%= link_to 'サイト紹介', about_path ,class: "header-text"%></li>
-          <li><%= link_to '犬種一覧', public_dog_breeds_path ,class: "header-text"%></li>
+          <li><%= link_to 'サイト紹介', about_path, class: "header-text" %></li>
+          <li><%= link_to '犬種一覧', public_dog_breeds_path, class: "header-text" %></li>
 
           <%= link_to top_path do %>
-            <li><%= image_tag 'logo.png' ,class: "header-logo"%></li>
+            <li><%= image_tag 'logo.png', class: "header-logo" %></li>
           <% end %>
 
-          <li><%= link_to '新規登録', new_member_registration_path ,class: "header-text"%></li>
-          <li><%= link_to 'ログイン', new_member_session_path ,class: "header-text"%></li>
+          <li><%= link_to '新規登録', new_member_registration_path, class: "header-text" %></li>
+          <li><%= link_to 'ログイン', new_member_session_path, class: "header-text" %></li>
         </ul>
 
         <div class="search">

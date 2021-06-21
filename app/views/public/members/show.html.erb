@@ -1,31 +1,25 @@
-<p id="notice">
-<%= notice %>
-</p>
 <div class="container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h2 class="head-line text-center">マイページ</h2>
-      <p><strong><i class="far fa-user"></i>登録情報</strong>
-      <%= link_to " 編集する", edit_public_member_path, class: "btn btn-success" %>
-      </p>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <td>氏名</td>
-            <td><%= @member.last_name %> <%= @member.first_name %></td>
-          </tr>
+  <h2 class="member-show-title-login"><%= @member.last_name %><%= @member.first_name %>さんのマイページ</h2>
+  <table class="table table-light table-hover member-show-table-login">
+    <tbody>
+      <tr>
+        <td>氏名</td>
+        <td><%= @member.last_name %> <%= @member.first_name %></td>
+      </tr>
 
-          <tr>
-            <td>カナ</td>
-            <td><%= @member.last_name_kana %> <%= @member.first_name_kana %></td>
-          </tr>
+      <tr>
+        <td>カナ</td>
+        <td><%= @member.last_name_kana %> <%= @member.first_name_kana %></td>
+      </tr>
 
-          <tr>
-            <td>メールアドレス</td>
-  					<td><%= @member.email %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <tr>
+        <td>メールアドレス</td>
+				<td><%= @member.email %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="member-edit-button-login">
+    <%= link_to " 編集する", edit_public_member_path, class: "btn btn-success" %>
   </div>
 </div>
