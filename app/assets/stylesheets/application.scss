@@ -439,6 +439,11 @@ textarea {
   position: fixed;
   top: 330px;
   left: 780px;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
 }
 
 .new-comment{

@@ -1,9 +1,13 @@
+<% content_for :title do %>
+  ワンだふる犬図鑑-会員情報編集画面
+<% end %>
+
 <div class="center-block container">
   <div calss="row">
     <div class="col-xs-12">
       <h2 class="head-line title_h2 text-center">会員情報編集</h2>
-      <%= render "layouts/error_messages", model: f.object, resource: @member %>
       <%= form_with(model:@member, url:public_member_path(@member.id), local: true ,method: :put) do |f| %>
+        <%= render "layouts/error_messages", model: f.object, resource: @member %>
         <table class="col-12 table table-borderless">
           <tbody>
             <tr>

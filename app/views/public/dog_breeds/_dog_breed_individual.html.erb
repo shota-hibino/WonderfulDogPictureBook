@@ -1,6 +1,8 @@
 <div class="dog_breed-individual">
   <%= link_to public_dog_breed_path(dog_breed.id), class: "btn-link", :style=>"color:#0099FF;" do %>
     <%= attachment_image_tag(dog_breed, :dog_image, size: "180x130", fallback: "no_image.jpg") %><br>
-    <%= dog_breed.dog_name %>
+    <div class="dog_breed-individual-name text-center bg-warning">
+      <%= dog_breed.dog_name %>
+    </div>
   <% end %>
 </div>

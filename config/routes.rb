@@ -17,19 +17,16 @@ Rails.application.routes.draw do
     resources :homes,only:[:top, :about]
     resources :searches,only:[:index, :search]
     resources :dog_breeds,only:[:index, :show] do
-      resources :comments,only:[:create, :destroy] do
-        resources :favorites, only: [:create, :destroy]
-      end
+      resources :comments,only:[:create, :destroy]
     end
 
     get 'public/searches', to: 'searches#search'
-    resources :members,only:[:show, :edit, :update, :secession_view, :secession]
+    resources :members,only:[:show, :edit, :update, :secession_view]
     root to: "public/homes#top", as: "top"
   end
 
   namespace :admin do
-    resources :searches,only:[:index, :search]
-    resources :genres,only:[:index, :create, :edit, :update]
+    resources :genres,only:[:index, :create, :edit, :update, :destroy]
     resources :dog_breeds,only:[:index, :new, :create, :show, :edit, :update]
     resources :members,only:[:index, :show, :edit, :update]
   end

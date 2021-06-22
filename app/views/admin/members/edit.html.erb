@@ -1,4 +1,8 @@
-<div class="container">
+<% content_for :title do %>
+  ワンだふる犬図鑑-会員情報編集
+<% end %><
+
+div class="container">
   <h2 class="dog_breed-edit-title"><%= @member.last_name %><%= @member.first_name %>さんの会員情報編集</h2>
   <%= form_with model:@member, url:admin_member_path(@member.id), local:true do |f| %>
     <%= render 'layouts/error_messages', model: f.object, resource: @member %>

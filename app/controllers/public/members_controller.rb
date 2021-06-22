@@ -26,9 +26,6 @@ class Public::MembersController < ApplicationController
     redirect_to top_path, notice: "またのご利用をお待ちしております。"
   end
 
-  def secession
-  end
-
    private
   def member_params
     params.require(:member).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email)
