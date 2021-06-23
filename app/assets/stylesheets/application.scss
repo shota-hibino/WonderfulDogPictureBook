@@ -53,7 +53,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background-image: url("background.jpg");
+  background-image: image-url("background.jpg");
 }
 
 main {
@@ -535,6 +535,14 @@ textarea {
   position: absolute;
   top: 400px;
   left: 27%;
+}
+
+.search-result{
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
 }
 
 // フッター

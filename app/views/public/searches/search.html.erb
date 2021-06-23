@@ -2,20 +2,16 @@
   ワンだふる犬図鑑-検索結果
 <% end %>
 
-<h3>dog_breeds search for "<%= @content %>"</h3>
-<div class="container">
-	<h2 class="member-show-title-login">犬種一覧</h2>
-	<section class="wrapper flex">
-		<div class="content">
-			<div class="d-inline-flex flex-row flex-wrap">
-				<div class="items">
-			  	<% @records.each do |dog_breed| %>
-			    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
-			  	<% end %>
-			  </div>
-			</div>
+<h3 class="search-result">dog_breeds search for "<%= @content %>"</h3>
+<section class="wrapper flex dog_breed-index-login">
+	<div class="content">
+		<div class="d-inline-flex flex-row flex-wrap">
+			<div class="items">
+		  	<% @records.each do |dog_breed| %>
+		    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
+		  	<% end %>
+		  </div>
 		</div>
-			<%= paginate(@records) %>
-	</section>
-</div>
+	</div>
+</section>
 
