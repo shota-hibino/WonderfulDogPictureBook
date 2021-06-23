@@ -1,19 +1,18 @@
 <% content_for :title do %>
   ワンだふる犬図鑑-退会確認
 <% end %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <strong>本当に退会しますか？</strong>
-        <div class="quit-msg">
-          退会すると会員情報登録や<br>
-          これまでの購入履歴が閲覧できなくなります。<br>
-          <br>
-          退会する場合は,「退会する」をクリックしてください。
-        </div>
-        <%= link_to "退会しない", top_path, class: 'btn btn-primary' %>
-        <%= link_to "退会する", public_members_secession_view_path(current_member), method: :PUT, data: {confirm: "本当に退会してもよろしいですか？"}, class: "btn btn-danger" %>
-    </div>
+<div class="quit">
+  <h1><strong>本当に退会しますか？</strong></h1>
+  <div class="quit-text">
+    <h3>
+      退会すると会員情報登録や<br>
+      これまでのコメントが閲覧できなくなります。<br><br>
+      退会する場合は,「退会する」をクリックしてください。
+    </h3>
   </div>
+</div>
+
+<div class="quit-button">
+  <%= link_to "退会しない", top_path, class: 'btn btn-primary mt-2' %>
+  <%= link_to "退会する", public_members_secession_view_path(current_member), method: :PUT, data: {confirm: "本当に退会してもよろしいですか？"}, class: "btn btn-danger mt-2" %>
 </div>

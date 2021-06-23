@@ -2,18 +2,16 @@
   ワンだふる犬図鑑-犬種一覧
 <% end %>
 
-<div class="container">
-	<h2 class="member-show-title-login">犬種一覧</h2>
-	<section class="wrapper flex">
-		<div class="content">
-			<div class="d-inline-flex flex-row flex-wrap">
-				<div class="items">
-			  	<% @dog_breeds.each do |dog_breed| %>
-			    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
-			  	<% end %>
-			  </div>
-			</div>
+<h2 class="dog_breed-index-title-login">犬種一覧</h2>
+<section class="wrapper flex dog_breed-index-login">
+	<div class="content">
+		<div class="d-inline-flex flex-row flex-wrap">
+			<div class="items">
+		  	<% @dog_breeds.each do |dog_breed| %>
+		    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
+		  	<% end %>
+		  </div>
 		</div>
-			<%= paginate(@dog_breeds) %>
-	</section>
-</div>
+	</div>
+		<%= paginate(@dog_breeds) %>
+</section>

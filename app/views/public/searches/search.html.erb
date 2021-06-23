@@ -3,19 +3,19 @@
 <% end %>
 
 <h3>dog_breeds search for "<%= @content %>"</h3>
-<div class="shiba-background">
-	<div class="container">
-		<div class="row">
-		  <h2 class="col-3 align-self-start text-center text-white bg-secondary mt-4">犬種一覧</h2>
-		  <div class="col-12">
-				<div class="d-inline-flex flex-row flex-wrap product_index p-4">
+<div class="container">
+	<h2 class="member-show-title-login">犬種一覧</h2>
+	<section class="wrapper flex">
+		<div class="content">
+			<div class="d-inline-flex flex-row flex-wrap">
+				<div class="items">
 			  	<% @records.each do |dog_breed| %>
 			    	<%= render "public/dog_breeds/dog_breed_individual", dog_breed: dog_breed %>
 			  	<% end %>
-				</div>
-		  </div>
+			  </div>
+			</div>
 		</div>
-	  <%= paginate(@dog_breeds) %>
-	</div>
+			<%= paginate(@records) %>
+	</section>
 </div>
 

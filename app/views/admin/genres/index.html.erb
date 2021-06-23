@@ -2,20 +2,20 @@
   ワンだふる犬図鑑-ジャンル一覧
 <% end %>
 
-<div class="container">
-  <h2 class="genre-title">ジャンル一覧・追加</h2>
-  <div class="genre">
-    <%= form_with model: @genre, url: admin_genres_path, local: true do |f| %>
-      <table>
-        <tr>
-          <th>ジャンル名</th>
-          <th><%= f.text_field :name %></th>
-          <th><%= f.submit "新規登録", class: 'btn btn-success' %></th>
-        </tr>
-      </table>
-    <% end %>
-  </div>
+<h2 class="genre-title">ジャンル一覧・追加</h2>
+<div class="genre">
+  <%= form_with model: @genre, url: admin_genres_path, local: true do |f| %>
+    <table>
+      <tr>
+        <th>ジャンル名</th>
+        <th><%= f.text_field :name %></th>
+        <th><%= f.submit "新規登録", class: 'btn btn-success' %></th>
+      </tr>
+    </table>
+  <% end %>
+</div>
 
+<div class="genre-table">
   <% if @genres.exists? %>
     <table class="table table-light table-hover">
       <thead class="thead-light">

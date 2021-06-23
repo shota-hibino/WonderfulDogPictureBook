@@ -2,29 +2,34 @@
   ワンだふる犬図鑑-犬種詳細
 <% end %>
 
-<div class="container">
-	<div class="dog_breed_show">
-		<h2 class="dog_breed_show-title">犬種詳細</h2>
-		<div class="dog_breed_show-image">
-	  	<%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
-	  </div>
 
-	  <div class="dog_breed_show-text">
-	    <p>
-	      犬種名：<%= @dog_breed.dog_name  %>
-	    </p>
+<div class="dog_breed_show">
+	<h2 class="dog_breed_show-title">犬種詳細</h2>
+	<div class="dog_breed_show-image">
+  	<%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
+  </div>
 
-	    <p>
-	      犬種説明：<%= @dog_breed.dog_introduction  %>
-			</p>
+  <div class="dog_breed_show-text ">
+    <p>
+      犬種名</br>　<%= @dog_breed.dog_name  %>
+    </p>
 
-	    <p>
-	      ジャンル：<%= @dog_breed.genre.name %>
-	    </p>
-		</div>
+		<p>
+	    <div>
+	      犬種説明
+	      <div class="col-sm-8">
+	      	<%= @dog_breed.dog_introduction  %>
+	      </div>
+			</div>
+		</p>
 
-		<div class="dog_breed_show-button">
-	  	<%= link_to "編集する", edit_admin_dog_breed_path(@dog_breed), data: {"turbolinks" => false}, class: "btn btn-success" %>
-    </div>
+    <p>
+      ジャンル：<%= @dog_breed.genre.name %>
+    </p>
+	</div>
+
+	<div class="dog_breed_show-button">
+  	<%= link_to "編集する", edit_admin_dog_breed_path(@dog_breed), data: {"turbolinks" => false}, class: "btn btn-success" %>
   </div>
 </div>
+

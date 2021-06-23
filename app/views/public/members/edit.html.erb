@@ -2,62 +2,57 @@
   ワンだふる犬図鑑-会員情報編集画面
 <% end %>
 
-<div class="center-block container">
-  <div calss="row">
-    <div class="col-xs-12">
-      <h2 class="head-line title_h2 text-center">会員情報編集</h2>
-      <%= form_with(model:@member, url:public_member_path(@member.id), local: true ,method: :put) do |f| %>
-        <%= render "layouts/error_messages", model: f.object, resource: @member %>
-        <table class="col-12 table table-borderless">
-          <tbody>
-            <tr>
-              <td>
-                <%= f.label :"氏名", class: "col-xs-3" %>
-              </td>
-              <td>
-                <%= f.text_field :last_name, class: "col-12" %>
-              </td>
-              <td>
-                <%= f.text_field :first_name, class: "col-12" %>
-              </td>
-            </tr>
 
-            <tr>
-              <td>
-                <%= f.label :"フリガナ", class: "col-xs-3" %>
-              </td>
-              <td>
-                <%= f.text_field :last_name_kana, class: "col-12" %>
-              </td>
-              <td>
-                <%= f.text_field :first_name_kana, class: "col-12" %>
-              </td>
-            </tr>
+<h2 class="dog_breed-edit-title">会員情報編集</h2>
+<%= form_with(model:@member, url:public_member_path(@member.id), local: true ,method: :put) do |f| %>
+  <%= render "layouts/error_messages", model: f.object, resource: @member %>
+  <table class="col-12 table table-borderless member-edit-table">
+    <tbody>
+      <tr>
+        <td class="member-edit-table-text">
+          <%= f.label :"氏名", class: "col-xs-3" %>
+        </td>
+        <td>
+          <%= f.text_field :last_name, class: "col-12" %>
+        </td>
+        <td>
+          <%= f.text_field :first_name, class: "col-12" %>
+        </td>
+      </tr>
 
-            <tr>
-              <td>
-                <%= f.label :"メールアドレス", class: "col-xs-3" %>
-              </td>
-              <td>
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-12" %>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <%= f.submit "編集内容を保存する", class: "btn btn-primary" %>
-              </td>
-              <td>
-                <%= link_to '退会する', public_members_secession_path, class: "btn btn-danger "%>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <%= link_to "戻る", public_member_path(current_member), class: "btn btn-info" %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      <% end %>
-    </div>
-  </div>
-</div>
+      <tr>
+        <td class="member-edit-table-text">
+          <%= f.label :"フリガナ", class: "col-xs-3" %>
+        </td>
+        <td>
+          <%= f.text_field :last_name_kana, class: "col-12" %>
+        </td>
+        <td>
+          <%= f.text_field :first_name_kana, class: "col-12" %>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="member-edit-table-text">
+          <%= f.label :"メールアドレス", class: "col-xs-3" %>
+        </td>
+        <td>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-12" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.submit "編集内容を保存する", class: "btn btn-primary" %>
+        </td>
+        <td>
+          <%= link_to '退会する', public_members_secession_path, class: "btn btn-danger "%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to "戻る", public_member_path(current_member), class: "btn btn-info" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

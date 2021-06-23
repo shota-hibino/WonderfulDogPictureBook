@@ -2,42 +2,40 @@
   ワンだふる犬図鑑-犬種一覧
 <% end %>
 
-<div class="container">
-  <h2 class="dog_breed-index-title">犬種一覧</h2>
-    <%= link_to new_admin_dog_breed_path, data: {"turbolinks" => false}, class: "new-dog_breed btn btn-warning" do %>
-    <i class="fas fa-plus"></i>
-      新規犬種登録
-    <% end %>
+<h2 class="dog_breed-index-title">犬種一覧</h2>
+  <%= link_to new_admin_dog_breed_path, data: {"turbolinks" => false}, class: "new-dog_breed btn btn-warning" do %>
+  <i class="fas fa-plus"></i>
+    新規犬種登録
+  <% end %>
 
-  <table class="table table-light table-hover admin-dog_breeds-table">
-    <thead class="thead-light">
-      <tr>
-        <th class = text-center>犬種</th>
-        <th class = text-center>ジャンル</th>
+<table class="table table-light table-hover admin-dog_breeds-table">
+  <thead class="thead-light">
+    <tr>
+      <th class = text-center>犬種</th>
+      <th class = text-center>ジャンル</th>
+    </tr>
+  </thead>
+
+  <tbody>
+		<% @dog_breeds.each do |dog_breed| %>
+			<tr>
+        <td class="text-left align-middle">
+          <!--犬種-->
+          <%= link_to admin_dog_breed_path(dog_breed), class: "btn-link" do %>
+            <%= dog_breed.dog_name %>
+          <% end %>
+        </td>
+
+        <td class="text-center align-middle">
+          <!--ジャンル-->
+          <%= dog_breed.genre.name %>
+        </td>
+
+        </td>
       </tr>
-    </thead>
-
-    <tbody>
-			<% @dog_breeds.each do |dog_breed| %>
-				<tr>
-          <td class="text-left align-middle">
-            <!--犬種-->
-            <%= link_to admin_dog_breed_path(dog_breed), class: "btn-link" do %>
-              <%= dog_breed.dog_name %>
-            <% end %>
-          </td>
-
-          <td class="text-center align-middle">
-            <!--ジャンル-->
-            <%= dog_breed.genre.name %>
-          </td>
-
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <div class="dog_breed-index-page">
-    <%= paginate(@dog_breeds) %>
-  </div>
+    <% end %>
+  </tbody>
+</table>
+<div class="dog_breed-index-page">
+  <%= paginate(@dog_breeds) %>
 </div>

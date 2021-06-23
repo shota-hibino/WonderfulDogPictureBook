@@ -30,10 +30,6 @@ header{
   top: 0;
 }
 
-.header-text{
-  font-size: 25px;
-}
-
 // 等間隔に並べる
 ul {
   display: flex;
@@ -65,19 +61,13 @@ main {
   height: 100%;
 }
 
-.container{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 // 管理者
 
 // ログイン
 .admin-login{
-  position: fixed;
+  position: absolute;
   top: 200px;
+  left: 47%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -86,9 +76,9 @@ main {
 }
 
 .login-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 350px;
+  left: 47%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -99,9 +89,9 @@ main {
 // 犬種一覧画面
 
 .dog_breed-index-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 295px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -110,27 +100,29 @@ main {
 }
 
 .admin-dog_breeds-table{
-  position: fixed;
-  top: 200px;
+  position: absolute;
+  top: 230px;
+  left: 27%;
   width: 50%;
 }
 
 .new-dog_breed{
-  position: fixed;
-  top: 150px;
-  right: 295px;
+  position: absolute;
+  top: 185px;
+  right: 23%;
 }
 
 .dog_breed-index-page{
-  position: fixed;
-  top: 640px;
+  position: absolute;
+  top: 660px;
+  left: 47%;
 }
 
 // 犬種新規登録・編集画面
 .dog_breed-new-edit-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 295px;
+  left: 40%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -139,8 +131,9 @@ main {
 }
 
 .dog_breed_new_edit{
-  position: fixed;
+  position: absolute;
   top: 220px;
+  left: 40%;
 }
 
 .dog_breed_new_edit-text{
@@ -158,9 +151,9 @@ textarea {
 
 // 犬種詳細画面
 .dog_breed_show-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 25%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -169,15 +162,15 @@ textarea {
 }
 
 .dog_breed_show-image{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 150px;
+  left: 25%;
 }
 
 .dog_breed_show-text{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 550px;
+  left: 50%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -185,11 +178,18 @@ textarea {
               -2px -2px 3px white;
 }
 
+.dog_breed_show-button{
+  position: absolute;
+  top: 450px;
+  left: 33%;
+}
+
+
 // ジャンル一覧
 .genre-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -198,9 +198,9 @@ textarea {
 }
 
 .genre{
-  position: fixed;
-  top: 240px;
-  left: 130px;
+  position: absolute;
+  top: 220px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -208,11 +208,18 @@ textarea {
               -2px -2px 3px white;
 }
 
+.genre-table{
+  position: absolute;
+  top: 280px;
+  left: 27%;
+  width: 50%;
+}
+
 // ジャンル編集
 .genre-edit-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 38%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -221,16 +228,16 @@ textarea {
 }
 
 .genre-edit{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 120px;
+  left: 38%;
 }
 
 // メンバー一覧
 .member-index-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -239,16 +246,17 @@ textarea {
 }
 
 .member-table{
-  position: fixed;
+  position: absolute;
   top: 220px;
+  left: 27%;
   width: 50%;
 }
 
 // メンバー詳細
 .member-show-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -257,22 +265,23 @@ textarea {
 }
 
 .member-show-table{
-  position: fixed;
+  position: absolute;
   top: 220px;
+  left: 27%;
   width: 50%;
 }
 
 .member-edit-button{
-  position: fixed;
-  top: 330px;
-  left: 900px;
+  position: absolute;
+  top: 490px;
+  left: 27%;
 }
 
 // メンバー編集
 .dog_breed-edit-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -281,10 +290,10 @@ textarea {
 }
 
 .member-edit-table{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 120px;
-  width: 70%;
+  left: 27%;
+  width: 50%;
 }
 
 .member-edit-table-text{
@@ -295,17 +304,20 @@ textarea {
               -2px -2px 3px white;
 }
 
-.member-edit-button{
-  position: fixed;
-  top: 500px;
-  left: 320px;
+.member-save-button{
+  position: absolute;
+  top: 520px;
+  left: 27%;
 }
 
 // 会員又は未ログイン
 
 // トップページ
 .top{
-  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  text-align: center;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -322,10 +334,23 @@ textarea {
               -2px -2px 3px white;
 }
 
+.about-title{
+  position: absolute;
+  top: 150px;
+  left: 15%;
+}
+
+.about-text{
+  position: absolute;
+  top: 250px;
+  left: 15%;
+}
+
 // ログイン
 .member-login{
-  position: fixed;
+  position: absolute;
   top: 200px;
+  left: 47%;
 }
 
 .member-login-text{
@@ -347,9 +372,9 @@ textarea {
 
 // 新規登録
 .signup-title{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 200px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -358,8 +383,9 @@ textarea {
 }
 
 .member-signup{
-  position: fixed;
+  position: absolute;
   top: 200px;
+  left: 27%;
 }
 
 .member-signup-text{
@@ -386,9 +412,21 @@ textarea {
   justify-content: center;
 }
 
-.dog_breed_title{
-  text-align: center;
-  margin-top: 10px;
+.dog_breed-index-title-login{
+  position: absolute;
+  top: 150px;
+  left: 27%;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.dog_breed-index-login{
+  position: absolute;
+  top: 200px;
+  left: 27%;
 }
 
 .content {
@@ -408,9 +446,9 @@ textarea {
 
 // 犬種詳細
 .dog_breed_show-title-member{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 20%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -419,15 +457,15 @@ textarea {
 }
 
 .dog_breed_show-image-member{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 150px;
+  left: 20%;
 }
 
 .dog_breed_show-text-member{
-  position: fixed;
+  position: absolute;
   top: 460px;
-  left: 150px;
+  left: 20%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -436,9 +474,9 @@ textarea {
 }
 
 .comments{
-  position: fixed;
+  position: absolute;
   top: 330px;
-  left: 780px;
+  left: 60%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -447,16 +485,16 @@ textarea {
 }
 
 .new-comment{
-  position: fixed;
+  position: absolute;
   top: 220px;
-  left: 780px;
+  left: 60%;
 }
 
 // マイページ
 .member-show-title-login{
-  position: fixed;
+  position: absolute;
   top: 150px;
-  left: 100px;
+  left: 27%;
   color: orange;
   text-shadow: 2px  2px 3px white,
               -2px  2px 3px white,
@@ -465,17 +503,41 @@ textarea {
 }
 
 .member-show-table-login{
-  position: fixed;
+  position: absolute;
   top: 220px;
+  left: 27%;
   width: 50%;
 }
 
 .member-edit-button-login{
-  position: fixed;
+  position: absolute;
   top: 380px;
-  left: 260px;
+  left: 27%;
 }
 
+// 退会確認画面
+.quit{
+  position: absolute;
+  top: 150px;
+  left: 27%;
+  color: orange;
+  text-shadow: 2px  2px 3px white,
+              -2px  2px 3px white,
+               2px -2px 3px white,
+              -2px -2px 3px white;
+}
+
+.quit-text{
+  margin-top: 20px;
+}
+
+.quit-button{
+  position: absolute;
+  top: 400px;
+  left: 27%;
+}
+
+// フッター
 footer {
   height: 70px;
   width: 100%;
