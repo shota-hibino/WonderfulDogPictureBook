@@ -10,23 +10,21 @@
 
   <div class="dog_breed_show-text-member">
     <p>
-      犬種名</br>　<%= @dog_breed.dog_name  %>
+      犬種名</br><%= @dog_breed.dog_name  %>
     </p>
 
 		<p>
-	    <div>
-	      犬種説明
-	      <div class="col-sm-6">
-	      	<%= @dog_breed.dog_introduction  %>
-	      </div>
-			</div>
-		</p>
+    	犬種説明
+      <!--改行対応-->
+      <%= simple_format(@dog_breed.dog_introduction) %>
+  	</p>
 
     <p>
       ジャンル：<%= @dog_breed.genre.name %>
     </p>
 	</div>
 </div>
+
 <!--コメント機能表示-->
 <span class = "comments">
   <%= render 'public/comments/index', dog_breed: @dog_breed %>
@@ -35,7 +33,7 @@
 <!--コメント投稿-->
 <div class="new-comment">
 <%= form_with(model:[@dog_breed, @comment],url: public_dog_breed_comments_path(@dog_breed), remote: true) do |f| %>
-  <%= f.text_area :comment,size: "40x2", placeholder: "コメントをここに", class: "form-control" %>
+  <%= f.text_area :comment, size: "40x2", placeholder: "コメントをここに", class: "form-control" %>
   <%= f.submit "送信する", class: "mt-1" %>
 <% end %>
 </div>

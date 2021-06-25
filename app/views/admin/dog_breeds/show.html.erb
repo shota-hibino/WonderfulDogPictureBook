@@ -11,17 +11,14 @@
 
   <div class="dog_breed_show-text ">
     <p>
-      犬種名</br>　<%= @dog_breed.dog_name  %>
+      犬種名</br><%= @dog_breed.dog_name  %>
     </p>
 
 		<p>
-	    <div>
-	      犬種説明
-	      <div class="col-sm-8">
-	      	<%= @dog_breed.dog_introduction  %>
-	      </div>
-			</div>
-		</p>
+    	犬種説明
+      <!--改行対応-->
+      <%= simple_format(@dog_breed.dog_introduction) %>
+  	</p>
 
     <p>
       ジャンル：<%= @dog_breed.genre.name %>
