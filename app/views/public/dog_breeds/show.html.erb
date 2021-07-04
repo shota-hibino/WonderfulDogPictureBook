@@ -8,12 +8,6 @@
   	<%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
   </div>
 
-  <div class="tag-box">
-    <% @dog_breed.tags.each do |tag| %>
-      <span class="label"><%= tag.name %></span>
-    <% end %>
-  </div>
-
   <div class="dog_breed_show-text-member">
     <p>
       犬種名</br><%= @dog_breed.dog_name  %>
