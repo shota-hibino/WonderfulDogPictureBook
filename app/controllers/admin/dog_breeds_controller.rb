@@ -41,6 +41,15 @@ class Admin::DogBreedsController < ApplicationController
   def update
     @dog_breed = DogBreed.find(params[:id])
     if @dog_breed.update(dog_breed_params)
+      #Visionモデルに画像を渡すと、その画像の解析し、当てはまるカテゴリーを配列として返す。
+      tags = Vision.get_image_data(@dog_breed.dog_image)
+
+      #該当したタグの配列をeach文で小分けにしてcreateする。
+      #1対多の便利な機能、「親.子供create」と記述すれば、親_idが勝手に保存される。
+      tags.each do |tag|
+        @dog_breed.tags.create(name: tag)
+      end
+
       redirect_to admin_dog_breeds_path(@dog_breed)
     else
       render :edit
