@@ -50,7 +50,7 @@ class Admin::DogBreedsController < ApplicationController
         @dog_breed.tags.create(name: tag)
       end
 
-      redirect_to admin_dog_breeds_path(@dog_breed)
+      redirect_to admin_dog_breed_path(@dog_breed)
     else
       render :edit
     end
