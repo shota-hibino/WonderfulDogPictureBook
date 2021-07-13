@@ -1,5 +1,7 @@
 class Admin::DogBreedsController < ApplicationController
   before_action :set_genres, only: [:new, :edit, :index, :create, :update]
+
+  # ログインしているかどうかではじく
   before_action :authenticate_admin!
 
   def index
