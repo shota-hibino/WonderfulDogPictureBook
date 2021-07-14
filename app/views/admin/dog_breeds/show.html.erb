@@ -9,6 +9,7 @@
   	<%= attachment_image_tag(@dog_breed, :dog_image, size: "340x220", fallback: "no_image.jpg" ) %>
   </div>
 
+  <!--画像認識の結果-->
   <div class="tag-box">
     <% @dog_breed.tags.each do |tag| %>
       <span class="label"><%= tag.name %></span>
