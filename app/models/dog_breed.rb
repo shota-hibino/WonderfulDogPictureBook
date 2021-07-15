@@ -3,7 +3,7 @@ class DogBreed < ApplicationRecord
   has_many:comments, dependent: :destroy
   has_many:tags, dependent: :destroy
 
-
+  # 検索
   def self.search_for(content, method)
     # 完全一致
     if method == 'perfect'
