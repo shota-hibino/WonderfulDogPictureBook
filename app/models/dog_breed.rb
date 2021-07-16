@@ -20,6 +20,7 @@ class DogBreed < ApplicationRecord
     end
   end
 
+  # 画像投稿
   attachment :dog_image
 
   # バリデーション
