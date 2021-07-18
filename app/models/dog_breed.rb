@@ -1,5 +1,6 @@
 class DogBreed < ApplicationRecord
   belongs_to :genre
+  # 犬種が削除された際にコメント・タグ消去
   has_many:comments, dependent: :destroy
   has_many:tags, dependent: :destroy
 
