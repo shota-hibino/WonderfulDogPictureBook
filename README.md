@@ -77,3 +77,6 @@ https://www.pakutaso.com/
 
 ・O-DAN (オーダン）- 無料写真素材・フリーフォト検索
 https://o-dan.net/ja/# WonderfulDogPictureBook
+
+・ロゴメーカー | 【商用利用OK】無料で誰でも簡単に自分のショップのロゴが作れる
+https://logo-maker.stores.jp/workspace/
